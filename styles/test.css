@@ -1,3 +1,12 @@
+root {
+--PastelGreen: #b0f2b4ff;
+--PastelBlue: #baf2e9ff;
+--PastelPink: #ffcad4ff;
+--PastelPurple: #ddb1e4ff;
+}
+
+
+
 img{
   margin: 0 auto;
   display: block;

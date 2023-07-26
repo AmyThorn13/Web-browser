@@ -1,4 +1,11 @@
-* {
+*
+root {
+--PastelGreen: #b0f2b4ff;
+--PastelBlue: #baf2e9ff;
+--PastelPink: #ffcad4ff;
+--PastelPurple: #ddb1e4ff;
+}
+{
     font-family: sans-serif;
     margin: 0;
     padding: 0;
@@ -19,7 +26,7 @@ header {
     width: 100%;
     display: flex;
     flex-direction: row;
-    background-color: white;
+    background-color:var(--PastelPink);
     font-weight: 300;
     padding: 15px;
     justify-content: center;
@@ -27,7 +34,7 @@ header {
 
 header h1 {
     padding-right: 40px;
-    border-right: 1px solid gray;
+    border-right: 1px solid var(PastelBlue);
 }
 
 header ul {
@@ -64,7 +71,7 @@ header li :hover {
 
 .card {
     width: 28%;
-    background-color: white;
+    background-color: var(PastelPurple);
     color: #1e2d2fe8;
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);

@@ -1,0 +1,16 @@
+/* Color Pallet */
+:root {
+--PastelGreen: #b0f2b4ff;
+--PastelBlue: #baf2e9ff;
+--PastelPink: #ffcad4ff;
+--PastelPurple: #ddb1e4ff;
+}
+/* Canvas 1 */
+#canvas1 {
+  border: 5px solid var(--PastelBlue);
+  position: absolute;
+  top: 10%; 
+  left: 5%
+  width: 500px; 
+  height: 500px
+}

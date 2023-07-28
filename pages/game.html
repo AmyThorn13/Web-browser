@@ -1,17 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+ 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-   <link rel="stylesheet" href="../styles/game.css"> 
+  <link rel="stylesheet" href="../styles/game.css">
+  <title>Canvas Follow Mouse</title>
+  <style>
+    canvas {
+      border: #334 100px solid ;
+    }
+ 
+    body {
+      padding: 50px;
+    }
+  </style>
 </head>
+   <header>
+    <h1>Game</h1>
+    <ul>
+      <li>
+        <a href="./index.html">
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="./pages/about.html">
+          About Creator
+        </a>
+      </li>
+      <li>
+        <a href="./pages/test.html">
+          Testpage
+        </a>
+    </ul>
+  </header>
 <body>
-  <canvas id="canvas1">
-    <h1>text</h1>
-  </canvas>
-  <script scr="game.js"></script>
-  
+  <canvas id="myCanvas" width="600px" height="600px"></canvas>
+ 
+  <script>
+ var canvas = document.querySelector("#myCanvas");
+var context = canvas.getContext("2d");
+ 
+var myImage = new Image();
+myImage.src = "https://www.frankslaboratory.co.uk/downloads/shadow_dog.png";
+myImage.addEventListener("load", loadImage, false);
+ 
+function loadImage(e) {
+  animate();
+}
+ 
+var shift = 0;
+var frameWidth = 600;
+var frameHeight = 600;
+var totalFrames = 6;
+var currentFrame = 0;
+ 
+function animate() {
+  context.clearRect(0, 0, frameHeight, frameWidth);
+ 
+  //draw each frame + place them in the middle
+  context.drawImage(myImage, shift, 0, 575, 532, 0, 0, frameWidth, frameHeight);
+ 
+  shift += frameWidth + 1;
+ 
+  /*
+    Start at the beginning once you've reached the
+    end of your sprite!
+  */
+  if (currentFrame == totalFrames) {
+    shift = 0;
+    currentFrame = 0;
+  }
+ 
+  currentFrame++;
+ 
+  //requestAnimationFrame(animate);
+}
+ 
+  </script>
+ 
 </body>
+ 
 </html>

@@ -6,11 +6,12 @@
 --PastelPurple: #ddb1e4ff;
 }
 /* Canvas 1 */
-#canvas1 {
+#myCanvas {
   border: 5px solid var(--PastelBlue);
   position: absolute;
   top: 10%; 
-  left: 5%
+  left: 10%;
+  transform: translate(-50% -50%);
   width: 500px; 
   height: 500px
 }
